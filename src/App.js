@@ -12,7 +12,7 @@ class App extends Component {
         <NavbarFeatures />
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to the page</h1>
         </header>
         <p className="App-intro">
           Random Text
