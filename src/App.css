@@ -8,10 +8,32 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  background-image: linear-gradient(rgb(128, 0, 32), rgba(128, 0, 32, 0.5)100%), 
+                    url(static/bg.jpg);                    
+  /* Center and scale the image nicely 
+  background-position: center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
   color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .App-header {
+    background-image: linear-gradient(rgb(128, 0, 32), rgba(128, 0, 32, 0.4)100%), 
+                      url(static/bg.jpg);                    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+  }
+}
+
+.hr-light {
+  border-top: 2px solid #fff;
+  width: 25vh;
 }
 
 .App-title {
