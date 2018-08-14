@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './App.css';
 import NavbarFeatures from './navbarFeatures';
+import Sponsor from './Sponsor';
 
 class App extends Component {
   render() {
@@ -34,15 +35,16 @@ class App extends Component {
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">Our Sponsors</h2>
             <p class="text-center w-responsive mx-auto mb-5">Lol</p>
-            <div class="container-fluid">
+            {/*<div class="container-fluid">
               <div class="row fluid">
-                <div class="col-md-4">Sponsor</div>
+                <div class="col-md-4"><Sponsor name="Test"/></div>
                 <div class="col-md-4">Sponsor</div>
                 <div class="col-md-4">Sponsor</div>
                 <div class="col-md-4">Sponsor</div>
                 <div class="col-md-4">Sponsor</div>
               </div>
-            </div>
+    </div>*/}
+          <Sponsor name="test"/>
           </section>
 
           <a id="team" class="anchor"/>
