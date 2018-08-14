@@ -26,11 +26,14 @@ class App extends Component {
 
           <a id="about" class="anchor"/>
           <section class="my-5">
-            <h2 class="h1-responsive font-weight-bold text-center my-5">About Us</h2>
+            <h2 class="h1-responsive font-weight-bold text-center my-3">About Us</h2>
             <p class="text-center w-responsive mx-auto mb-5">Lol</p>
           </section>
 
-          <section id="sponsors">
+          <a id="sponsors" class="anchor"/>
+          <section class="my-5">
+            <h2 class="h1-responsive font-weight-bold text-center my-3">Our Sponsors</h2>
+            <p class="text-center w-responsive mx-auto mb-5">Lol</p>
             <div class="container-fluid">
               <div class="row fluid">
                 <div class="col-md-4">Sponsor</div>
@@ -41,13 +44,19 @@ class App extends Component {
               </div>
             </div>
           </section>
-          <p className="App-intro">
-            Random Text
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            Lol
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            Lol
-        </p>
+
+          <a id="team" class="anchor"/>
+          <section class="my-5">
+            <h2 class="h1-responsive font-weight-bold text-center my-3">The Team</h2>
+            <p class="text-center w-responsive mx-auto mb-5">Lol</p>
+          </section>
+
+          <a id="contact" class="anchor"/>
+          <section class="my-5">
+            <h2 class="h1-responsive font-weight-bold text-center my-3">Contact Us</h2>
+            <p class="text-center w-responsive mx-auto mb-5">Lol</p>
+          </section>
+
         </div>
         <footer class="page-footer font-small footer-bg pt-4">
 
@@ -61,7 +70,7 @@ class App extends Component {
 
               <div class="col-md-6 mb-md-0 mb-3">
 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id excepturi hic.</p>
+                <p>Lol</p>
 
               </div>
             </div>

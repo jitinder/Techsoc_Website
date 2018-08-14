@@ -41,31 +41,31 @@ class NavbarFeatures extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>
                           <NavItem style={{paddingTop: 10}}>
-                          <button type="button" class="btn btn-white waves-effect btn-sm" data-toggle="button"><b>Join</b></button>
+                          <button type="button" class="btn btn-white waves-effect btn-sm" data-toggle="button"><b>Join Now</b></button>
                           </NavItem>
                           <Desktop>
                           <h2 class="white-text" style={{paddingTop: 10}}>|</h2>
                           </Desktop>
                           <NavItem style={{paddingTop: 10}}>
-                          <a href="#about" class="nav-link"><b>Sponsors</b></a>
+                          <a href="#about" class="nav-link"><b>About Us</b></a>
                           </NavItem>
                           <Desktop>
                           <h2 class="white-text" style={{paddingTop: 10}}>|</h2>
                           </Desktop>
                           <NavItem style={{paddingTop: 10}}>
-                          <a href="#about" class="nav-link"><b>About</b></a>
+                          <a href="#sponsors" class="nav-link"><b>Our Sponsors</b></a>
                           </NavItem>
                           <Desktop>
                           <h2 class="white-text" style={{paddingTop: 10}}>|</h2>
                           </Desktop>
                           <NavItem style={{paddingTop: 10}}>
-                          <a href="#about" class="nav-link"><b>The Team</b></a>
+                          <a href="#team" class="nav-link"><b>The Team</b></a>
                           </NavItem>
                           <Desktop>
                           <h2 class="white-text" style={{paddingTop: 10}}>|</h2>
                           </Desktop>
                           <NavItem style={{paddingTop: 10}}>
-                          <a href="#about" class="nav-link"><b>Contact Us</b></a>
+                          <a href="#contact" class="nav-link"><b>Contact Us</b></a>
                           </NavItem>
                         {/*<Desktop>
                         <NavItem style={{paddingTop: 10}}>
