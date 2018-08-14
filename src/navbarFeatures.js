@@ -41,16 +41,31 @@ class NavbarFeatures extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>
                           <NavItem style={{paddingTop: 10}}>
-                              <NavLink to="#"><b>About</b></NavLink>
+                          <button type="button" class="btn btn-white waves-effect btn-sm" data-toggle="button"><b>Join</b></button>
                           </NavItem>
+                          <Desktop>
+                          <h2 class="white-text" style={{paddingTop: 10}}>|</h2>
+                          </Desktop>
                           <NavItem style={{paddingTop: 10}}>
-                              <NavLink to="#"><b>Events</b></NavLink>
+                          <a href="#about" class="nav-link"><b>Sponsors</b></a>
                           </NavItem>
+                          <Desktop>
+                          <h2 class="white-text" style={{paddingTop: 10}}>|</h2>
+                          </Desktop>
                           <NavItem style={{paddingTop: 10}}>
-                              <NavLink to="#"><b>Sponsors</b></NavLink>
+                          <a href="#about" class="nav-link"><b>About</b></a>
                           </NavItem>
+                          <Desktop>
+                          <h2 class="white-text" style={{paddingTop: 10}}>|</h2>
+                          </Desktop>
                           <NavItem style={{paddingTop: 10}}>
-                              <NavLink to="#"><b>Contact Us</b></NavLink>
+                          <a href="#about" class="nav-link"><b>The Team</b></a>
+                          </NavItem>
+                          <Desktop>
+                          <h2 class="white-text" style={{paddingTop: 10}}>|</h2>
+                          </Desktop>
+                          <NavItem style={{paddingTop: 10}}>
+                          <a href="#about" class="nav-link"><b>Contact Us</b></a>
                           </NavItem>
                         {/*<Desktop>
                         <NavItem style={{paddingTop: 10}}>
@@ -78,7 +93,6 @@ class NavbarFeatures extends React.Component {
               </header>
               
             </div>
-            
         );
     }
 }
