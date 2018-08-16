@@ -3,7 +3,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './App.css';
-import {Container} from 'mdbreact';
+import { Container } from 'mdbreact';
 import Responsive from 'react-responsive';
 import NavbarFeatures from './navbarFeatures';
 import Sponsor from './Sponsor';
@@ -20,124 +20,124 @@ class App extends Component {
       <div>
         <NavbarFeatures />
         <div className="App">
-        <Particles 
-        params={{
-            particles: {
-              number: {
-                value: 20,
-                density: {
-                  enable: true,
-                  value_area: 1000
-                }
-              },
-              color: {
-                value: '#ffffff'
-              },
-              shape: {
-                type: 'circle',
-                stroke: {
-                  width: 0,
-                  color: '#000000'
-                },
-                polygon: {
-                  nb_sides: 5
-                },
-                image: {
-                  width: 100,
-                  height: 100
-                }
-              },
-              opacity: {
-                value: 0.5,
-                random: false,
-                anim: {
-                  enable: false,
-                  speed: 1,
-                  opacity_min: 0.1,
-                  sync: false
-                }
-              },
-              size: {
-                value: 3,
-                random: true,
-                anim: {
-                  enable: false,
-                  speed: 40,
-                  size_min: 0.1,
-                  sync: false
-                }
-              },
-              line_linked: {
-                enable: true,
-                distance: 150,
-                color: '#ffffff',
-                opacity: 0.4,
-                width: 1
-              },
-              move: {
-                enable: true,
-                speed: 6,
-                direction: 'none',
-                random: false,
-                straight: false,
-                out_mode: 'out',
-                bounce: false,
-                attract: {
-                  enable: false,
-                  rotateX: 600,
-                  rotateY: 1200
-                }
-              }
-            },
-            interactivity: {
-              detect_on: 'canvas',
-              events: {
-                onhover: {
-                  enable: false,
-                  mode: 'repulse'
-                },
-                onclick: {
-                  enable: false,
-                  mode: 'push'
-                },
-                resize: true
-              },
-              modes: {
-                grab: {
-                  distance: 400,
-                  line_linked: {
-                    opacity: 1
+          <Particles
+            params={{
+              particles: {
+                number: {
+                  value: 20,
+                  density: {
+                    enable: true,
+                    value_area: 1000
                   }
                 },
-                bubble: {
-                  distance: 400,
-                  size: 40,
-                  duration: 2,
-                  opacity: 8,
-                  speed: 3
+                color: {
+                  value: '#ffffff'
                 },
-                repulse: {
-                  distance: 200,
-                  duration: 0.4
+                shape: {
+                  type: 'circle',
+                  stroke: {
+                    width: 0,
+                    color: '#000000'
+                  },
+                  polygon: {
+                    nb_sides: 5
+                  },
+                  image: {
+                    width: 100,
+                    height: 100
+                  }
                 },
-                push: {
-                  particles_nb: 4
+                opacity: {
+                  value: 0.5,
+                  random: false,
+                  anim: {
+                    enable: false,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false
+                  }
                 },
-                remove: {
-                  particles_nb: 2
+                size: {
+                  value: 3,
+                  random: true,
+                  anim: {
+                    enable: false,
+                    speed: 40,
+                    size_min: 0.1,
+                    sync: false
+                  }
+                },
+                line_linked: {
+                  enable: true,
+                  distance: 150,
+                  color: '#ffffff',
+                  opacity: 0.4,
+                  width: 1
+                },
+                move: {
+                  enable: true,
+                  speed: 6,
+                  direction: 'none',
+                  random: false,
+                  straight: false,
+                  out_mode: 'out',
+                  bounce: false,
+                  attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                  }
                 }
-              }
-            },
-            retina_detect: true
-          }
-        }
-        style={{
-          width: '100%',
-          position: 'absolute',
-          display: 'flex', 
-          justifyContent: 'center'
-        }}
-        />
+              },
+              interactivity: {
+                detect_on: 'canvas',
+                events: {
+                  onhover: {
+                    enable: false,
+                    mode: 'repulse'
+                  },
+                  onclick: {
+                    enable: false,
+                    mode: 'push'
+                  },
+                  resize: true
+                },
+                modes: {
+                  grab: {
+                    distance: 400,
+                    line_linked: {
+                      opacity: 1
+                    }
+                  },
+                  bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2,
+                    opacity: 8,
+                    speed: 3
+                  },
+                  repulse: {
+                    distance: 200,
+                    duration: 0.4
+                  },
+                  push: {
+                    particles_nb: 4
+                  },
+                  remove: {
+                    particles_nb: 2
+                  }
+                }
+              },
+              retina_detect: true
+            }
+            }
+            style={{
+              width: '100%',
+              position: 'absolute',
+              display: 'flex',
+              justifyContent: 'center'
+            }}
+          />
           <header className="App-header">
             <div class="container flex-center">
               <div class="row pt-5 mt-3">
@@ -151,57 +151,51 @@ class App extends Component {
             </div>
           </header>
 
-          <a id="about" class="anchor"/>
+          <a id="about" class="anchor" />
           <section class="my-5 mx-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">About Us</h2>
             <p class="text-justify w-responsive mx-auto mb-5">
-            TechSoc is one of the largest societies, the winner of the 2016/2017 Society of the Year award, 
-            and the only all-compassing technology society at University College London, as well as one of the
-            largest technology societies in the UK. UCL is widely recognised to be among the ten best universities
-            in the world by most international rankings, with a very active research community, the second highest 
-            research grant income in the UK and the country’s highest overall 4 <i class="fa fa-star"/> Research Activity in Computer Science
-            and Informatics in REF2014. Overwhelmingly, the most technically adept students at UCL are members of TechSoc.
+              TechSoc is one of the largest societies, the winner of the 2016/2017 Society of the Year award,
+              and the only all-compassing technology society at University College London, as well as one of the
+              largest technology societies in the UK. UCL is widely recognised to be among the ten best universities
+              in the world by most international rankings, with a very active research community, the second highest
+            research grant income in the UK and the country’s highest overall 4 <i class="fa fa-star" /> Research Activity in Computer Science
+              and Informatics in REF2014. Overwhelmingly, the most technically adept students at UCL are members of TechSoc.
             </p>
 
-            <InfoCards/>
+            <InfoCards />
 
             <p class="text-justify w-responsive mx-auto my-5">
-            Looking forward to 2018/2019, we intend to build on our achievements by expanding the scope and 
-            sophistication of our activities, running more high-profile events and establishing special initiatives 
-            for key branches of technology.
+              Looking forward to 2018/2019, we intend to build on our achievements by expanding the scope and
+              sophistication of our activities, running more high-profile events and establishing special initiatives
+              for key branches of technology.
             </p>
 
           </section>
 
-          <a id="sponsors" class="anchor"/>
+          <a id="sponsors" class="anchor" />
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">Our Sponsors</h2>
             <p class="text-center w-responsive mx-auto mb-5">Lol</p>
-            {/*<div class="container-fluid">
-              <div class="row fluid">
-                <div class="col-md-4"><Sponsor name="Test"/></div>
-                <div class="col-md-4">Sponsor</div>
-                <div class="col-md-4">Sponsor</div>
-                <div class="col-md-4">Sponsor</div>
-                <div class="col-md-4">Sponsor</div>
-              </div>
-    </div>*/}
-          <Sponsor name="test"/>
+
+            <Sponsor name="test" />
           </section>
 
-          <a id="team" class="anchor"/>
+          <a id="team" class="anchor" />
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">The Team</h2>
             <p class="text-center w-responsive mx-auto mb-5">Lol</p>
           </section>
 
-          <a id="contact" class="anchor"/>
+          <a id="contact" class="anchor" />
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">Contact Us</h2>
             <p class="text-center w-responsive mx-auto mb-5">Lol</p>
           </section>
 
         </div>
+
+
         <footer class="page-footer font-small footer-bg pt-4">
 
           <div class="container-fluid text-center text-md-center">

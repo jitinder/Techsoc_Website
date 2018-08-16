@@ -31,6 +31,7 @@ class NavbarFeatures extends React.Component {
         const view = { background: 'url(./bg.png)no-repeat center center', backgroundSize: 'cover', height: '100vh' }
         return (
             <div>
+            
                 <header>
                     <Router>
                         <Navbar color="transparent" dark expand="md" fixed="top" scrolling>
@@ -39,7 +40,7 @@ class NavbarFeatures extends React.Component {
                                     <img src="./techsoc_logo.svg" height="50 dp" alt="TechSoc Logo" />
                                 </NavbarBrand>
                                 <NotDesktop>
-                                            <button type="button" class="btn btn-white waves-effect btn-sm" data-toggle="button"><b>Join Now</b></button>
+                                            <a href="https://studentsunionucl.org/clubs-societies/technology-society" target="_new" class="btn btn-white waves-effect btn-sm" role="button"><b>Join Now</b></a>
                             </NotDesktop>
                                 {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
                                 <Collapse isOpen={this.state.collapse} navbar>
@@ -87,7 +88,7 @@ class NavbarFeatures extends React.Component {
                                 </Collapse>
                             </Container>
                             <Desktop>
-                                <button type="button" class="btn btn-white waves-effect btn-sm" data-toggle="button"><b>Join Now</b></button>
+                            <a href="https://studentsunionucl.org/clubs-societies/technology-society" target="_new" class="btn btn-white waves-effect btn-sm" role="button"><b>Join Now</b></a>
                             </Desktop>
                         </Navbar>
                     </Router>
