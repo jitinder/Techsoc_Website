@@ -146,6 +146,9 @@ class App extends Component {
                   <hr class="hr-light mt-4" />
                   <br />
                   <h6 class="mb-6 white-text">Promoting technological awareness and innovation both within and beyond UCL</h6>
+                  <br />
+                  <a href="https://studentsunionucl.org/clubs-societies/technology-society" target="_new" class="btn btn-white waves-effect btn-md" role="button"><b>Register through UCL Student's Union</b></a>
+                  <a href="https://studentsunionucl.org/clubs-societies/technology-society" target="_new" class="btn btn-white waves-effect btn-md" role="button"><b>Join our Mailing List</b></a>
                 </div>
               </div>
             </div>
