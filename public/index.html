@@ -44,9 +44,18 @@
     });
   </script>
 
-  <!-- Mail Chimp -->
-  <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" 
-  data-dojo-config="usePlainJson: true, isDebug: false"></script>
+   <!-- Mail Chimp -->
+   <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" 
+   data-dojo-config="usePlainJson: true, isDebug: false"></script>
+   <script>
+     function openPopUp(){
+       require (["mojo/signup-forms/Loader"], function (L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"612037a0602a4f87335bb48af","lid":"eb08f2b314" }) })
+       document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+       document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+         console.log("clicked");
+     }
+   </script>
+  
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -60,14 +69,6 @@
 </head>
 
 <body>
-    <script>
-        function showMailingPopUp() {
-          require (["mojo/signup-forms/Loader"], function (L) { L.start({ "baseUrl": "baseUrl":"mc.us11.list-manage.com","uuid":"612037a0602a4f87335bb48af","lid":"eb08f2b314" }) })
-          document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-        };
-    
-      document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
-      </script>
   <noscript>
     You need to enable JavaScript to see this website.
   </noscript>
