@@ -9,6 +9,7 @@ import NavbarFeatures from './navbarFeatures';
 import Sponsor from './Sponsor';
 import InfoCards from './InfoCards';
 import Particles from 'react-particles-js';
+import ContactUs from './ContactUs';
 
 
 const Desktop = props => <Responsive {...props} minWidth={992} />;
@@ -180,9 +181,15 @@ class App extends Component {
           <a id="sponsors" class="anchor" />
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">Our Sponsors</h2>
-            <p class="text-center w-responsive mx-auto mb-5">Lol</p>
+            <p class="text-center w-responsive mx-auto mb-5">TechSoc would not be as good as it is if it wasn't for our amazing sponsors, and we're deeply greatful for all their support.</p>
 
             <Sponsor name="test" />
+          </section>
+
+          <a id="events" class="anchor" />
+          <section class="my-5">
+            <h2 class="h1-responsive font-weight-bold text-center my-3">Events</h2>
+            <p class="text-center w-responsive mx-auto mb-5">Lol</p>
           </section>
 
           <a id="team" class="anchor" />
@@ -194,7 +201,8 @@ class App extends Component {
           <a id="contact" class="anchor" />
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">Contact Us</h2>
-            <p class="text-center w-responsive mx-auto mb-5">Lol</p>
+            <p class="text-center w-responsive mx-auto mb-3"></p>
+            <ContactUs/>
           </section>
 
         </div>

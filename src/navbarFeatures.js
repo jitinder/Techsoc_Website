@@ -58,6 +58,12 @@ class NavbarFeatures extends React.Component {
                                             <h2 class="white-text" style={{ paddingTop: 10 }}>|</h2>
                                         </Desktop>
                                         <NavItem style={{ paddingTop: 10 }}>
+                                            <a href="#events" class="nav-link"><b>Events</b></a>
+                                        </NavItem>
+                                        <Desktop>
+                                            <h2 class="white-text" style={{ paddingTop: 10 }}>|</h2>
+                                        </Desktop>
+                                        <NavItem style={{ paddingTop: 10 }}>
                                             <a href="#team" class="nav-link"><b>The Team</b></a>
                                         </NavItem>
                                         <Desktop>
