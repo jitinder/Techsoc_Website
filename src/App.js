@@ -10,6 +10,7 @@ import Sponsor from './Sponsor';
 import InfoCards from './InfoCards';
 import Particles from 'react-particles-js';
 import ContactUs from './ContactUs';
+import EventTabs from './EventTabs';
 
 
 const Desktop = props => <Responsive {...props} minWidth={992} />;
@@ -182,20 +183,26 @@ class App extends Component {
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">Our Sponsors</h2>
             <p class="text-center w-responsive mx-auto mb-5">TechSoc would not be as good as it is if it wasn't for our amazing sponsors, and we're deeply greatful for all their support.</p>
-
             <Sponsor name="test" />
+            <p class="text-center w-responsive mx-auto my-5"><i>Interested in Sponsoring us? Drop an email to &nbsp;
+              <a class="one" href="mailto:sponsorship@ucltechsoc.com"><fa class="fa fa-envelope"/> sponsorship@ucltechsoc.com</a></i>
+            </p>
           </section>
 
           <a id="events" class="anchor" />
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">Events</h2>
             <p class="text-center w-responsive mx-auto mb-5">Lol</p>
+            <div class="container flex-center">
+            <EventTabs/>
+            </div>
           </section>
 
           <a id="team" class="anchor" />
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">The Team</h2>
             <p class="text-center w-responsive mx-auto mb-5">Lol</p>
+
           </section>
 
           <a id="contact" class="anchor" />

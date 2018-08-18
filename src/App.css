@@ -60,6 +60,10 @@
   background-color: #fff;
 }
 
+a.one{
+  color: rgb(51, 15, 83);
+}
+
 .App-title {
   font-size: 1.5em;
 }
