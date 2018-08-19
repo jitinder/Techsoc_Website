@@ -192,10 +192,16 @@ class App extends Component {
           <a id="events" class="anchor" />
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">Events</h2>
-            <p class="text-center w-responsive mx-auto mb-5">Lol</p>
+            <p class="text-center w-responsive mx-auto mb-5">
+            As one of the most active societies in UCL, we host a huge variety of events at a frequent rate. We make it a point to deliver successful and memorable events.
+            <br/><br/>Find all of our upcoming event listed below. Click on "Event Info" to be redirected to the appropriate Event page.
+            </p>
             <div class="container flex-center">
             <EventTabs/>
             </div>
+            <p class="text-center w-responsive mx-auto my-5"><i>Interested in Organizing an Event with us? Drop an email to &nbsp;
+              <a class="one" href="mailto:sponsorship@ucltechsoc.com"><fa class="fa fa-envelope"/> events@ucltechsoc.com</a></i>
+              </p>
           </section>
 
           <a id="team" class="anchor" />

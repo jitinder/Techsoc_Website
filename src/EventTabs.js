@@ -7,7 +7,6 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import EventCard from './EventCard.js';
 import Responsive from 'react-responsive';
-import './EventTabs.css';
 
 const Desktop = props => <Responsive {...props} minWidth={992} />;
 const NotDesktop = props => <Responsive {...props} maxWidth={991} />;
@@ -16,7 +15,7 @@ function TabContainer(props) {
     return (
         <div>
             <Desktop>
-                <Typography component="div" style={{height: 400, overflow: 'auto' }}>
+                <Typography component="div" style={{height: 450, overflow: 'auto' }}>
                     {props.children}
                 </Typography>
             </Desktop>
@@ -32,44 +31,6 @@ function TabContainer(props) {
 TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
-
-filterSelection('all');
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("content");
-    if (c == "all") c = "";
-    console.log("clicked " +c);
-    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-    for (i = 0; i < x.length; i++) {
-      w3RemoveClass(x[i], "show");
-      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-    }
-  }
-  
-  // Show filtered elements
- function w3AddClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-      if (arr1.indexOf(arr2[i]) == -1) {
-        element.className += " " + arr2[i];
-      }
-    }
-  }
-  
-  // Hide elements that are not selected
- function w3RemoveClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-      while (arr1.indexOf(arr2[i]) > -1) {
-        arr1.splice(arr1.indexOf(arr2[i]), 1); 
-      }
-    }
-    element.className = arr1.join(" ");
-  }
 
 const styles = theme => ({
     root: {
@@ -117,6 +78,34 @@ class EventTabs extends React.Component {
         this.setState({ value });
     };      
 
+    toShow = (label, value) => {
+        if(value === 0){ // Case All
+            return true;
+        }
+        var thisLabel = this.getLabel(value);
+        if(label === thisLabel){
+            return true;
+        }
+        return false;
+    }
+
+    getLabel = (value) => {
+        switch(value){
+            case 0:
+            return "all";
+            case 1:
+            return "talks";
+            case 2:
+            return "hackathons";
+            case 3:
+            return "projects";
+            case 4:
+            return "socials";
+            default:
+            return "others";
+        }
+    }
+
     render() {
         const { classes } = this.props;
         const { value } = this.state;
@@ -130,7 +119,7 @@ class EventTabs extends React.Component {
                         scrollable
                         scrollButtons='on'
                         classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}>
-                        <Tab label="All" onClick="filterSelection('all')" classes={{ root: classes.tabRoot, selected: classes.tabSelected }} />
+                        <Tab label="All" classes={{ root: classes.tabRoot, selected: classes.tabSelected }} />
                         <Tab label="Talks" classes={{ root: classes.tabRoot, selected: classes.tabSelected }} />
                         <Tab label="Hackathons" classes={{ root: classes.tabRoot, selected: classes.tabSelected }} />
                         <Tab label="Projects" classes={{ root: classes.tabRoot, selected: classes.tabSelected }} />
@@ -138,38 +127,16 @@ class EventTabs extends React.Component {
                         <Tab label="Others" classes={{ root: classes.tabRoot, selected: classes.tabSelected }} />
                     </Tabs>
                 </AppBar>
-                {value === 0 &&
                     <TabContainer>
                         <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-md-4 sm-12 p-3">
-                                <div class="content hacks">
-                                    <EventCard title="Title" />
-                                    </div>
+                            <div class="row" id="eventContainer">
+                                <div style={{display: this.toShow("socials", this.state.value) ? 'block' : 'none' }} class="col-md-4 sm-12 p-3">
+                                    <EventCard title="Treasure Hunt Welcome Picnic" date="21 September 2018" time="16.00" location="Gordon Square Garden" image="picnic01"  url="ucltechsoc" tag="Socials"/>
                                 </div>
-                                <div class="col-md-4 sm-12 p-3">
-                                <div class="content hacks">
-                                    <EventCard />
-                                    </div>
-                                </div>
-                                <div class="col-md-4 sm-12 p-3">
-                                <div class="content talks">
-                                    <EventCard title="Title" />
-                                    </div>
-                                </div>
-                                <div class="col-md-4 sm-12 p-3">
-                                <div class="content socials">
-                                    <EventCard title="Title" />
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
-                    </TabContainer>}
-                {value === 1 && <TabContainer>Item 2</TabContainer>}
-                {value === 2 && <TabContainer>Item 3</TabContainer>}
-                {value === 3 && <TabContainer>Item 4</TabContainer>}
-                {value === 4 && <TabContainer>Item 5</TabContainer>}
-                {value === 5 && <TabContainer>Item 6</TabContainer>}
+                    </TabContainer>
             </div>
         );
     }
