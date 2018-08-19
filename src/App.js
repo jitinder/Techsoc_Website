@@ -9,6 +9,7 @@ import NavbarFeatures from './navbarFeatures';
 import Sponsor from './Sponsor';
 import InfoCards from './InfoCards';
 import Particles from 'react-particles-js';
+import Team from './Team'
 import ContactUs from './ContactUs';
 import EventTabs from './EventTabs';
 
@@ -149,7 +150,7 @@ class App extends Component {
                   <br />
                   <h6 class="mb-6 white-text">Promoting technological awareness and innovation both within and beyond UCL</h6>
                   <br />
-                  <a href="https://studentsunionucl.org/clubs-societies/technology-society" target="_new" class="btn btn-white waves-effect btn-md" role="button"><b>Register via Students' Union</b></a>
+                  <a href="https://studentsunionucl.org/clubs-societies/technology-society" target="_new" class="btn btn-white waves-effect btn-md" role="button"><b>Register via Students Union</b></a>
                   <a onClick={window.openPopUp} class="btn btn-white waves-effect btn-md" role="button"><b>Subscribe to Newsletter</b></a>
                   <p class="text-sm my-5 white-text">Stay updated by following our <a href="https://facebook.com/ucltechsoc" target="_new" class="white-highlight">&nbsp;<fa class="fa fa-facebook-official"/> Facebook Page </a>.</p>
                 </div>
@@ -207,8 +208,8 @@ class App extends Component {
           <a id="team" class="anchor" />
           <section class="my-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">The Team</h2>
-            <p class="text-center w-responsive mx-auto mb-5">Lol</p>
-
+            <p class="text-center w-responsive mx-auto mb-5">Find out all about the brains behind <strong><i>UCL TechSoc</i></strong> </p>
+            <Team/>
           </section>
 
           <a id="contact" class="anchor" />
