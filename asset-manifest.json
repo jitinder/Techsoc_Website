@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.1920c159.css",
   "main.css.map": "static/css/main.1920c159.css.map",
-  "main.js": "static/js/main.4f132d31.js",
-  "main.js.map": "static/js/main.4f132d31.js.map",
+  "main.js": "static/js/main.3b195d4d.js",
+  "main.js.map": "static/js/main.3b195d4d.js.map",
   "static\\media\\Roboto-Bold.eot": "static/media/Roboto-Bold.ecdd509c.eot",
   "static\\media\\Roboto-Bold.ttf": "static/media/Roboto-Bold.e31fcf18.ttf",
   "static\\media\\Roboto-Bold.woff": "static/media/Roboto-Bold.dc81817d.woff",
@@ -26,6 +26,7 @@
   "static\\media\\arrow_left.svg": "static/media/arrow_left.11911410.svg",
   "static\\media\\arrow_right.svg": "static/media/arrow_right.8ef6a08c.svg",
   "static\\media\\bg.jpg": "static/media/bg.d3674148.jpg",
+  "static\\media\\cardimagesize.jpg": "static/media/cardimagesize.34dfeed2.jpg",
   "static\\media\\coding.svg": "static/media/coding.16f8bd69.svg",
   "static\\media\\event.svg": "static/media/event.4d3915e6.svg",
   "static\\media\\fontawesome-webfont.eot": "static/media/fontawesome-webfont.674f50d2.eot",
@@ -34,5 +35,6 @@
   "static\\media\\fontawesome-webfont.woff2?v=4.7.0": "static/media/fontawesome-webfont.af7ae505.woff2",
   "static\\media\\fontawesome-webfont.woff?v=4.7.0": "static/media/fontawesome-webfont.fee66e71.woff",
   "static\\media\\logowhite.png": "static/media/logowhite.29813a3f.png",
+  "static\\media\\picnic01.png": "static/media/picnic01.a08994b2.png",
   "static\\media\\scroll.svg": "static/media/scroll.7b46f64c.svg"
 }
