@@ -145,7 +145,12 @@ class App extends Component {
             <div class="container flex-center">
               <div class="row pt-5 mt-3">
                 <div class="col-md-12">
+                <Desktop>
                   <h1 class="h1-responsive white-text font-weight-bold text-uppercase mb-3">UCL Technology Society</h1>
+                  </Desktop>
+                  <NotDesktop>
+                  <h1 class="h1-responsive white-text font-weight-bold text-uppercase mb-3 mt-5">UCL Technology Society</h1>
+                    </NotDesktop>
                   <hr class="hr-light mt-4" />
                   <br />
                   <h6 class="mb-6 white-text">Promoting technological awareness and innovation both within and beyond UCL</h6>

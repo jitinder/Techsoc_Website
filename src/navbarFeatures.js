@@ -4,8 +4,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Responsive from 'react-responsive';
 import './NavbarFeatures.css';
 
-const Desktop = props => <Responsive {...props} minWidth={768} />;
-const NotDesktop = props => <Responsive {...props} maxWidth={767}/>;
+const Desktop = props => <Responsive {...props} minWidth={778}/>;
+const NotDesktop = props => <Responsive {...props} maxWidth={777}/>;
 
 class NavbarFeatures extends React.Component {
     //pink darken-4
