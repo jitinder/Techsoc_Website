@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
 import './Sponsor.css';
+import CSImage from './static/sponsors/uclcs.svg';
 
 class Sponsor extends React.Component {
 
@@ -18,6 +19,26 @@ class Sponsor extends React.Component {
             dots: false,
             infinite: true,
             pauseOnHover: true,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 2,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 2,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                  }
+                }
+              ],
             rows: 1,
             slidesToShow: 3,
             speed: 1000,
@@ -29,41 +50,41 @@ class Sponsor extends React.Component {
                     <Slider {...settings}>
                     <div>
                         <div class="container1">
-                            <img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg" alt="Avatar" class="image" />
+                            <img src={CSImage} alt="UCL Computer Science" class="image" />
                             <div class="overlay">
-                                <div class="text">Hello World</div>
+                                <div class="text">Department of Computer Science UCL</div>
                             </div>
                         </div>
                         </div>
                         <div>
                         <div class="container1">
-                            <img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg" alt="Avatar" class="image" />
+                            <img src={CSImage} alt="UCL Computer Science" class="image" />
                             <div class="overlay">
-                                <div class="text">Hello World</div>
+                                <div class="text">Department of Computer Science UCL</div>
                             </div>
                         </div>
                         </div>
                         <div>
                         <div class="container1">
-                            <img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg" alt="Avatar" class="image" />
+                            <img src={CSImage} alt="UCL Computer Science" class="image" />
                             <div class="overlay">
-                                <div class="text">Hello World</div>
+                                <div class="text">Department of Computer Science UCL</div>
                             </div>
                         </div>
                         </div>
                         <div>
                         <div class="container1">
-                            <img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg" alt="Avatar" class="image" />
+                            <img src={CSImage} alt="UCL Computer Science" class="image" />
                             <div class="overlay">
-                                <div class="text">Hello World</div>
+                                <div class="text">Department of Computer Science UCL</div>
                             </div>
                         </div>
                         </div>
                         <div>
                         <div class="container1">
-                            <img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg" alt="Avatar" class="image" />
+                            <img src={CSImage} alt="UCL Computer Science" class="image" />
                             <div class="overlay">
-                                <div class="text">Hello World</div>
+                                <div class="text">Department of Computer Science UCL</div>
                             </div>
                         </div>
                         </div>

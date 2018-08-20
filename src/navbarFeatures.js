@@ -4,11 +4,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Responsive from 'react-responsive';
 import './NavbarFeatures.css';
 
-const Desktop = props => <Responsive {...props} minWidth={992} />;
-const NotDesktop = props => <Responsive {...props} maxWidth={991} />;
-const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
-const Mobile = props => <Responsive {...props} maxWidth={767} />;
-const Default = props => <Responsive {...props} minWidth={768} />;
+const Desktop = props => <Responsive {...props} minWidth={768} />;
+const NotDesktop = props => <Responsive {...props} maxWidth={767}/>;
 
 class NavbarFeatures extends React.Component {
     //pink darken-4
@@ -49,47 +46,30 @@ class NavbarFeatures extends React.Component {
                                             <a href="#about" class="nav-link"><b>About Us</b></a>
                                         </NavItem>
                                         <Desktop>
-                                            <h2 class="white-text" style={{ paddingTop: 10 }}>|</h2>
+                                            <h2 class="white-text vline">|</h2>
                                         </Desktop>
                                         <NavItem style={{ paddingTop: 10 }}>
                                             <a href="#sponsors" class="nav-link"><b>Our Sponsors</b></a>
                                         </NavItem>
                                         <Desktop>
-                                            <h2 class="white-text" style={{ paddingTop: 10 }}>|</h2>
+                                            <h2 class="white-text vline">|</h2>
                                         </Desktop>
                                         <NavItem style={{ paddingTop: 10 }}>
                                             <a href="#events" class="nav-link"><b>Events</b></a>
                                         </NavItem>
                                         <Desktop>
-                                            <h2 class="white-text" style={{ paddingTop: 10 }}>|</h2>
+                                            <h2 class="white-text vline">|</h2>
                                         </Desktop>
                                         <NavItem style={{ paddingTop: 10 }}>
                                             <a href="#team" class="nav-link"><b>The Team</b></a>
                                         </NavItem>
                                         <Desktop>
-                                            <h2 class="white-text" style={{ paddingTop: 10 }}>|</h2>
+                                            <h2 class="white-text vline">|</h2>
                                         </Desktop>
                                         <NavItem style={{ paddingTop: 10 }}>
                                             <a href="#contact" class="nav-link"><b>Contact Us</b></a>
                                         </NavItem>
-                                        {/*<Desktop>
-                        <NavItem style={{paddingTop: 10}}>
-                              <NavLink to="#"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></NavLink>
-                          </NavItem>
-                          <NavItem style={{paddingTop: 10}}>
-                              <NavLink to="#"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></NavLink>
-                          </NavItem>
-                          <NavItem style={{paddingTop: 10}}>
-                              <NavLink to="#"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></NavLink>
-                          </NavItem>
-                          <NavItem style={{paddingTop: 10}}>
-                            <NavLink to="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></NavLink>
-                          </NavItem>
-                          <NavItem style={{paddingTop: 10}}>
-                            <NavLink to="#"><i class="fa fa-snapchat-square fa-lg" aria-hidden="true"></i></NavLink>
-                          </NavItem>
-                          
-                        </Desktop>*/}
+                                        
                                     </NavbarNav>
                                 </Collapse>
                             </Container>

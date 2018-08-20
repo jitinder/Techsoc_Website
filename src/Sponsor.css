@@ -2,7 +2,7 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 200px;
   }
   
   .image {
@@ -30,7 +30,7 @@
   
   .text {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     position: absolute;
     top: 50%;
     left: 50%;

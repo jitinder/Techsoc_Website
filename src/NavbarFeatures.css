@@ -6,8 +6,20 @@
   background-color: #330F53;
 }
 
+.vline {
+  padding-top: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .navbar {
       background-color: #330F53;
+  }
+  .nav-link{
+    font-size: 12px;
+  }
+
+  .vline {
+    padding-top: 15px;
+    font-size: 17px;
   }
 }

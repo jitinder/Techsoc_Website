@@ -46,8 +46,16 @@ function EventCard(props) {
   function getImage(i){
       if(i == "picnic01"){
         return require('./static/events/picnic01.png');
+      } else if(i == "default-talks"){
+        return require('./static/events/default-talks.png');
+      } else if(i == "default-hackathons"){
+        return require('./static/events/default-hackathons.png');
+      } else if(i == "default-projects"){
+        return require('./static/events/default-projects.png');
+      } else if(i == "default-socials"){
+        return require('./static/events/default-socials.png');
       } else {
-          return require('./static/events/cardimagesize.jpg');
+          return require('./static/events/default-others.png');
       }
   }
 

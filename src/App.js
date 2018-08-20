@@ -181,7 +181,7 @@ class App extends Component {
           </section>
 
           <a id="sponsors" class="anchor" />
-          <section class="my-5">
+          <section class="py-3 sponsor-bg">
             <h2 class="h1-responsive font-weight-bold text-center my-3">Our Sponsors</h2>
             <p class="text-center w-responsive mx-auto mb-5">TechSoc would not be as good as it is if it wasn't for our amazing sponsors, and we're deeply greatful for all their support.</p>
             <Sponsor name="test" />
@@ -191,13 +191,13 @@ class App extends Component {
           </section>
 
           <a id="events" class="anchor" />
-          <section class="my-5">
+          <section class="my-5 mx-5">
             <h2 class="h1-responsive font-weight-bold text-center my-3">Events</h2>
-            <p class="text-center w-responsive mx-auto mb-5">
+            <p class="text-justify w-responsive mx-auto my-5">
             As one of the most active societies in UCL, we host a huge variety of events at a frequent rate. We make it a point to deliver successful and memorable events.
             <br/><br/>Find all of our upcoming event listed below. Click on "Event Info" to be redirected to the appropriate Event page.
             </p>
-            <div class="container flex-center">
+            <div class="container">
             <EventTabs/>
             </div>
             <p class="text-center w-responsive mx-auto my-5"><i>Interested in Organizing an Event with us? Drop an email to &nbsp;
@@ -224,20 +224,10 @@ class App extends Component {
 
         <footer class="page-footer font-small footer-bg pt-4">
 
-          <div class="container-fluid text-center text-md-center">
-            <div class="row">
-              <div class="col-md-6 mt-md-0 mt-3 flex-center">
+          <div class="container-fluid text-md-center">
 
                 <h5 class="text-uppercase font-weight-bold text-center logo"></h5>
 
-              </div>
-
-              <div class="col-md-6 mb-md-0 mb-3">
-
-                <p>Lol</p>
-
-              </div>
-            </div>
           </div>
 
           <div class="footer-copyright text-center py-3">© 2018 Copyright:
