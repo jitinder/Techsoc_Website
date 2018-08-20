@@ -157,7 +157,7 @@ class App extends Component {
                   <br />
                   <a href="https://studentsunionucl.org/clubs-societies/technology-society" target="_new" class="btn btn-white waves-effect btn-md" role="button"><b>Register via Students Union</b></a>
                   <a onClick={window.openPopUp} class="btn btn-white waves-effect btn-md" role="button"><b>Subscribe to Newsletter</b></a>
-                  <p class="text-sm my-5 white-text">Stay updated by following our <a href="https://facebook.com/ucltechsoc" target="_new" class="white-highlight">&nbsp;<fa class="fa fa-facebook-official"/> Facebook Page </a>.</p>
+                  <p class="text-sm my-5"> <a href="https://facebook.com/ucltechsoc" target="_new" class="white-text">Stay updated by following our <fa class="fa fa-facebook-official"/> <u>Facebook Page</u></a> .</p>
                 </div>
               </div>
             </div>

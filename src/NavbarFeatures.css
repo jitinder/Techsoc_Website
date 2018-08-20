@@ -10,6 +10,7 @@
   padding-top: 10px;
 }
 
+
 @media only screen and (max-width: 768px) {
   .navbar {
       background-color: #330F53;

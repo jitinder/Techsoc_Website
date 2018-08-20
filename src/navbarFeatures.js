@@ -5,7 +5,8 @@ import Responsive from 'react-responsive';
 import './NavbarFeatures.css';
 
 const Desktop = props => <Responsive {...props} minWidth={778}/>;
-const NotDesktop = props => <Responsive {...props} maxWidth={777}/>;
+const NotDesktop = props => <Responsive {...props} minWidth={331} maxWidth={777}/>;
+const VerySmall = props => <Responsive {...props} maxWidth={330}/>;
 
 class NavbarFeatures extends React.Component {
     //pink darken-4
@@ -34,7 +35,15 @@ class NavbarFeatures extends React.Component {
                         <Navbar color="transparent" dark expand="md" fixed="top" scrolling>
                             <Container>
                                 <NavbarBrand href="/">
-                                    <img src="./techsoc_logo.svg" height="50 dp" alt="TechSoc Logo" />
+                                <Desktop>
+                                    <img src="./techsoc_logo.svg" height="50" alt="TechSoc Logo" />
+                                    </Desktop>
+                                    <NotDesktop>
+                                    <img src="./techsoc_logo.svg" height="40" alt="TechSoc Logo" />
+                                        </NotDesktop>
+                                        <VerySmall>
+                                    <img src="./techsoc_logo.svg" height="30" alt="TechSoc Logo" />
+                                        </VerySmall>
                                 </NavbarBrand>
                                 <NotDesktop>
                                             <a href="https://studentsunionucl.org/clubs-societies/technology-society" target="_new" class="btn btn-white waves-effect btn-sm" role="button"><b>Join Now</b></a>
