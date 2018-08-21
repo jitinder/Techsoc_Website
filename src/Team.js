@@ -146,9 +146,9 @@ class Team extends React.Component {
                                             <a href="mailto:gensec@ucltechsoc.com" target="_new" class="white-text" title="Email Konrad">
                                                 <i class="fa fa-envelope" />
                                             </a>
-                                            {/* <a href="https://www.github.com/GITHUB" target="_new" class="white-text" title="Konrad's Github">
+                                            <a href="https://www.github.com/Konrad1208" target="_new" class="white-text" title="Konrad's Github">
                                                 <i class="fa fa-github" />
-                                            </a> */}
+                                            </a>
                                             <a href="https://www.linkedin.com/in/konrad-n-95204a150/" target="_new" class="white-text" title="Konrad's LinkedIn">
                                                 <i class="fa fa-linkedin" />
                                             </a>
