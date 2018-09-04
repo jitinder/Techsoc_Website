@@ -15,6 +15,7 @@ const styles = {
   },
   media: {
     height: 0,
+    objectFit: 'cover',
     paddingTop: '56.25%', // 16:9
   },
   cardActions: {
@@ -38,13 +39,53 @@ const styles = {
     boxShadow: "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
     fontSize: 11,
   },
+  overlay:{
+    height: "100%",
+    pointerEvents: "none",
+    opacity: 0.4,
+    zIndex: 9999999
+  },
 };
 
 function EventCard(props) {
   const { classes } = props;
 
+  function eventPast(){
+    var date = props.date;
+    var time = props.time;
+    var currentDate = new Date();
+    var splitDate = date.split(" ");
+    var year = currentDate.getFullYear();
+    if(splitDate[2] < year){
+      return true;
+    } else {
+      var month = currentDate.getMonth();
+      var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+      if(months.indexOf(splitDate[1]) < month){
+        return true;
+      } else {
+        var day = currentDate.getDate();
+        if(splitDate[0] < day){
+          return true;
+        } else if (splitDate[0] == day){
+          var splitTime = time.split(":");
+          var eventHour = splitTime[0];
+          var hour = currentDate.getHours();
+          if(eventHour < hour){
+            return true;
+          } else {
+            return false;
+          }
+        } else {
+          return false;
+        }
+      }
+    }
+    
+  }
+
   function getImage(i){
-      if(i == "picnic01"){
+      if(i == "https://picnic01"){
         return require('./static/events/picnic01.png');
       } else if(i == "default-talks"){
         return require('./static/events/default-talks.png');
@@ -54,8 +95,10 @@ function EventCard(props) {
         return require('./static/events/default-projects.png');
       } else if(i == "default-socials"){
         return require('./static/events/default-socials.png');
+      } else if(i == "default-others"){
+        return require('./static/events/default-others.png');
       } else {
-          return require('./static/events/default-others.png');
+          return i;
       }
   }
 
@@ -69,7 +112,21 @@ function EventCard(props) {
     } else if(tag === "Socials"){
       return "Hang out and meet members from the society as well as the committee and make awesome new friends!";
     } else {
-      return "Something that can't be simply categorized."
+      return "Something that can't simply be categorized."
+    }
+  }
+
+  function getDefaultImage(tag){
+    if(tag === "Talks"){
+      return "default-talks";
+    } else if(tag === "Hackathons"){
+      return "default-hackathons";
+    } else if(tag === "Projects"){
+      return "default-projects";
+    } else if(tag === "Socials"){
+      return "default-socials";
+    } else {
+      return "default-others";
     }
   }
 
@@ -79,27 +136,28 @@ function EventCard(props) {
     time: "00:00",
     location: "UCL Main Quad",
     tag: "Others",
-    image: 'meh',
-    url:"ucltechsoc",
+    url:"https://www.facebook.com/ucltechsoc",
 };
 
   const title = props.title;
   const date = props.date;
   const time = props.time;
   const location = props.location;
-  const imageUrl = props.image;
+  const imageUrl = props.image ? getImage(props.image) : getDefaultImage(props.tag);
   const tags = props.tag;
   const url = props.url;
+  const isPastEvent = eventPast();
   return (
     <div>
-      <Card className={classes.card}>
+      <Card className={classes.card} title={isPastEvent? "Event Over" : ""}>
+      <div className={isPastEvent? classes.overlay : ""}>
         <CardMedia
           className={classes.media}
           image={getImage(imageUrl)}
           title={title}
         />
         <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
+          <Typography gutterBottom variant="title" component="h2" style={{ overflow:"hidden", textOverflow:"ellipsis", height:"3em", marginTop:"0.5em"}}>
             {title}
           </Typography>
           <Typography component="p">
@@ -114,13 +172,14 @@ function EventCard(props) {
             {tags}
           </Button>
           </Tooltip>
-          <a target= "_new" href={"https://www.facebook.com/"+url}>
+          <a target= "_new" href={url}>
           <Button size="small" className={classes.button2}>
             Event Info
           </Button>
           </a>
         </CardActions>
-      </Card>
+        </div>
+      </Card> 
     </div>
   );
 }

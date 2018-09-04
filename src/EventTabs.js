@@ -20,7 +20,7 @@ function TabContainer(props) {
                 </Typography>
             </Desktop>
             <NotDesktop>
-                <Typography component="div" style={{height: 800, overflow: 'auto' }}>
+                <Typography component="div" style={{height: 600, overflow: 'auto' }}>
                     {props.children}
                 </Typography>
             </NotDesktop>
@@ -69,7 +69,82 @@ const styles = theme => ({
     },
 });
 
+var fetchUrl = "https://immense-journey-83442.herokuapp.com/getevents";
+
+export class RenderCards extends React.Component{
+
+    state = {
+        events : [],
+        fetched : false,
+    }
+
+    getEventList(){
+        fetch(fetchUrl).then(function(response) {
+            return response.json();
+          })
+          .then(myJson => {
+            this.setState({events: myJson, fetched: true});
+          });       
+    }
+
+    componentDidMount() {
+        this.getEventList();
+      }
+
+      toShow = (label, value) => {
+        if(value === 0){ // Case All
+            return true;
+        }
+        var thisLabel = this.getLabel(value);
+        if(label === thisLabel){
+            return true;
+        }
+        return false;
+    }
+
+    getLabel = (value) => {
+        switch(value){
+            case 0:
+            return "All";
+            case 1:
+            return "Talks";
+            case 2:
+            return "Hackathons";
+            case 3:
+            return "Projects";
+            case 4:
+            return "Socials";
+            default:
+            return "Others";
+        }
+    }
+
+      render() {    
+          var listItems;
+          if(this.state.fetched){
+            listItems = this.state.events.map((e) => (
+            <div style={{display: this.toShow(e.data.type, this.props.styleValues) ? 'block' : 'none' }} class="col-lg-4 col-md-6 col-sm-12 p-3">
+                <EventCard title={e.data.title} date={e.data.date} time={e.data.time} location={e.data.location} image={e.data.img_url}  url={e.data.link} tag={e.data.type}/>
+            </div>)
+            );
+          }
+        return (
+          <div>
+            { this.state.fetched &&
+            <div class= "row" id={this.props.id}>
+                {listItems}
+            </div>
+            }
+            { !this.state.fetched &&
+                <div style={{padding: "auto", paddingTop: "10%"}}>{"Loading Event Data... Please Wait"}<br/><i class="fa fa-circle-o-notch fa-spin fa-3x" style={{padding:"5%"}}/></div>
+            }
+          </div>
+        );
+      }
+}
+
 class EventTabs extends React.Component {
+
     state = {
         value: 0,
     };
@@ -77,6 +152,10 @@ class EventTabs extends React.Component {
     handleChange = (event, value) => {
         this.setState({ value });
     };      
+
+    componentDidMount = () => {
+        
+    };
 
     toShow = (label, value) => {
         if(value === 0){ // Case All
@@ -92,17 +171,17 @@ class EventTabs extends React.Component {
     getLabel = (value) => {
         switch(value){
             case 0:
-            return "all";
+            return "All";
             case 1:
-            return "talks";
+            return "Talks";
             case 2:
-            return "hackathons";
+            return "Hackathons";
             case 3:
-            return "projects";
+            return "Projects";
             case 4:
-            return "socials";
+            return "Socials";
             default:
-            return "others";
+            return "Others";
         }
     }
 
@@ -129,12 +208,7 @@ class EventTabs extends React.Component {
                 </AppBar>
                     <TabContainer>
                         <div class="container">
-                            <div class="row" id="eventContainer">
-                                <div style={{display: this.toShow("socials", this.state.value) ? 'block' : 'none' }} class="col-md-4 sm-12 p-3">
-                                    <EventCard title="Treasure Hunt Welcome Picnic" date="21 September 2018" time="16.00" location="Gordon Square Garden" image="picnic01"  url="ucltechsoc" tag="Socials"/>
-                                </div>
-                                
-                            </div>
+                                <RenderCards styleValues={this.state.value} id="eventContainer"/>
                         </div>
                     </TabContainer>
             </div>
