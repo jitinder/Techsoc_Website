@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
+import { Slide } from '@material-ui/core';
 
 const styles = {
   card: {
@@ -55,28 +56,49 @@ function EventCard(props) {
     var time = props.time;
     var currentDate = new Date();
     var splitDate = date.split(" ");
+    console.log(splitDate);
     var year = currentDate.getFullYear();
-    if(splitDate[2] < year){
+    console.log(typeof year,typeof parseInt(splitDate[2]));
+    if(parseInt(splitDate[2]) < year){
+      console.log("year small");
       return true;
     } else {
+      console.log("year ok");
       var month = currentDate.getMonth();
       var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+      //console.log(months.indexOf(splitDate[1]),month);
       if(months.indexOf(splitDate[1]) < month){
+        console.log("month small");
         return true;
       } else {
+        console.log("month ok");
         var day = currentDate.getDate();
-        if(splitDate[0] < day){
+        //console.log(typeof splitDate[0],typeof day);
+        if(splitDate[0][0] == 0){
+          splitDate[0] = splitDate[0].slice(1,1);
+        }
+        if(parseInt(splitDate[0]) < day){
+          console.log("day small");
           return true;
-        } else if (splitDate[0] == day){
+        } 
+        
+        else if (splitDate[0] == day){
+          console.log("day same");
           var splitTime = time.split(":");
           var eventHour = splitTime[0];
           var hour = currentDate.getHours();
-          if(eventHour < hour){
+         
+          if(parseInt(eventHour) < hour){
+            console.log("hour small");
             return true;
           } else {
+            console.log("hour ok");
             return false;
           }
-        } else {
+        }
+        
+        else {
+          console.log("everything fine");
           return false;
         }
       }
@@ -147,6 +169,7 @@ function EventCard(props) {
   const tags = props.tag;
   const url = props.url;
   const isPastEvent = eventPast();
+  console.log(date,time);
   return (
     <div>
       <Card className={classes.card} title={isPastEvent? "Event Over" : ""}>
