@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import './Team.css';
 import Responsive from 'react-responsive';
 import Slider from 'react-slick';
-import SidakIcon from './static/team/sidak.png'
+import SidakIcon from './static/team/sidak.jpg'
 import KimiaIcon from './static/team/kimia.png';
 import AyushmaanIcon from './static/team/ayushmaan.png';
 import KonradIcon from './static/team/konrad.png';
 import KseniaIcon from './static/team/ksenia.png';
 import SoniaIcon from './static/team/sonia.png';
 import VikashIcon from './static/team/vikash.png'
-import NoorIcon from './static/team/noor.png'
 import PoojaIcon from './static/team/pooja.png';
 import HelenIcon from './static/team/helen.jpg';
 class Team extends React.Component {
@@ -160,32 +159,6 @@ class Team extends React.Component {
                                 </div>
                                 <h4 class="mx-auto mt-3"> Konrad Niedzielski </h4>
                                 <h5 class="mx-auto mt-1 mb-3"> General Secretary </h5>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="member-container-scroll">
-                                <div class="container2">
-                                    <img src={NoorIcon} alt="Noor Garawi" class="team-image" />
-                                    <div class="middle">
-                                        <div class="team-links">
-                                            <a href="mailto:sponsorship@ucltechsoc.com" target="_new" class="white-text" title="Email Noor">
-                                                <i class="fa fa-envelope" />
-                                            </a>
-                                            {/* <a href="https://www.github.com/GITHUB" target="_new" class="white-text" title="Noor's Github">
-                                                <i class="fa fa-github" />
-                                            </a> */}
-                                            <a href="https://www.linkedin.com/in/noor-garawi-307081129/" target="_new" class="white-text" title="Noor's LinkedIn">
-                                                <i class="fa fa-linkedin" />
-                                            </a>
-                                            <a href="https://www.facebook.com/noor.garawi" target="_new" class="white-text" title="Noor's Facebook">
-                                                <i class="fa fa-facebook-official" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h4 class="mx-auto mt-3"> Noor Garawi </h4>
-                                <h5 class="mx-auto mt-1 mb-3"> Sponsorship Director </h5>
                             </div>
                         </div>
 
