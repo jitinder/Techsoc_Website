@@ -69,7 +69,7 @@ const styles = theme => ({
     },
 });
 
-var fetchUrl = "https://immense-journey-83442.herokuapp.com/getevents";
+var fetchUrl = "https://evening-brook-19862.herokuapp.com/events";
 
 export class RenderCards extends React.Component{
 
