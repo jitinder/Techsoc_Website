@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import './Sponsor.css';
 import CSImage from './static/sponsors/uclcs.svg';
 
-var fetchUrl = "https://evening-brook-19862.herokuapp.com/sponsors";
+var fetchUrl = "https://techsocbackend.azurewebsites.net/sponsors";
 
 export class RenderSponsors extends React.Component {
     state = {
