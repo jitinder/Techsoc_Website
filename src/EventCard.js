@@ -56,6 +56,7 @@ function EventCard(props) {
     var time = props.time;
     var currentDate = new Date();
     var splitDate = date.split(" ");
+    
     console.log(splitDate);
     var year = currentDate.getFullYear();
     console.log(typeof year,typeof parseInt(splitDate[2]));
@@ -73,9 +74,12 @@ function EventCard(props) {
       } else {
         console.log("month ok");
         var day = currentDate.getDate();
+        console.log(day);
         //console.log(typeof splitDate[0],typeof day);
         if(splitDate[0][0] == 0){
-          splitDate[0] = splitDate[0].slice(1,1);
+          splitDate[0] = splitDate[0].slice(1,);
+          console.log("removed zero");
+          console.log(splitDate[0]);
         }
         if(parseInt(splitDate[0]) < day){
           console.log("day small");
